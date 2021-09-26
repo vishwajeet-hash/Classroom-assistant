@@ -1,6 +1,7 @@
 const signupbtn=document.getElementById('btn_signup');
 const signinbtn=document.getElementById('btn_signin');
 const container = document.getElementById('container');
+console.log("script file runnning");
 signupbtn .addEventListener('click',() => {
     container.classList.add('mystyle');
     console.log("vks");
