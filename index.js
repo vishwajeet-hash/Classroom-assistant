@@ -35,7 +35,10 @@ const User = require('./models/User.js');
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local');
+const MongoStore = require('connect-mongo');
 // const expressLayouts = require('express-ejs-layouts');
+
+app.use(express.urlencoded({extended: true})); 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 
@@ -65,8 +68,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-//app.use signifies a middleware
-app.use(express.urlencoded());
+
 
 app.use(cookieParser());
 //for accessing static files i.e css js html images fonts etc.

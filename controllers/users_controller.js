@@ -33,7 +33,7 @@ module.exports.signUp = function(req, res){
 
 
 module.exports.usersHome = function(req,res){
-    return res.render('users_home'); 
+    return res.render('profile'); 
 }
 
 module.exports.createSession = function(req,res){
