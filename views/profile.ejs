@@ -10,54 +10,72 @@
     <title>Home</title>
 </head>
 <body id="main-body">
-        <nav>
-            <button id="bar" class="ham-bar-icon">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div id="avtar">
-                <img src="/images/profile.jpg" alt="profile">
-            </div>
-            <div id="heading">
-                <h1>Classroom Assistant</h1>
-            </div>
-            <button id="create">
-                <i class="fas fa-plus"></i>
-            </button>
-            <button id="settings">
-                <i class="fas fa-cog"></i>
-            </button>
-        </nav>
-    <section id="menu-visible" >
-        <p>all the Classroom</p>
-    </section>
-    <section id="settings-dropdown">
-        <ul>
-            <li>
+    <nav>
+        <button id="bar" class="ham-bar-icon">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div id="avtar">
+            <img src="/images/profile.jpg" alt="profile">
+        </div>
+        <div id="heading">
+            <h1>Classroom Assistant</h1>
+        </div>
+        <button id="create">
+            <i class="fas fa-plus"></i>
+        </button>
+        <button id="settings">
+            <i class="fas fa-cog"></i>
+        </button>
+    </nav>
+<section id="menu-visible" >
+    <p>all the Classroom</p>
+</section>
+<section id="settings-dropdown">
+    <ul>
+        <li>
+            <a href="/users/home">
                 <button>
                     Profile
                 </button>
-            </li>
-            <li>
+            </a>
+        </li>
+
+        <li>
+            <a href="/users/Sign-out">
                 <button>
                     Signout
                 </button>
-            </li>
-        </ul>
-    </section>
-    <section>
-        <ul>
-            <li>
+            </a>    
+        </li>
+        
+    </ul>
+</section>
+<section id="create-join-dropdown">
+    <ul>
+        <li>
+            <a href="">
                 <button>
                     Create
                 </button>
-            </li>
-            <li>
+            </a>    
+        </li>
+        <li>
+            <a href="">
                 <button>
                     Join
                 </button>
-            </li>
-        </ul>
-    </section>
+            </a>
+        </li>
+
+    </ul>
+</section>
+    <!-- <main id="change" > 
+        <div id="change-div">
+            <a href="/users/change-name-email"></a><button> Change name/email </button>
+            <a href="/users/change-password"></a><button> Change password </button>
+            <a href="/users/change-avatar"></a><button> Change avatar </button>
+        </div>
+    </main> -->
     <script src="/js/profile.js"></script>
 </body>
 </html>
