@@ -29,10 +29,11 @@ module.exports.signUp = function(req, res){
 
     });
 }
-
-
 module.exports.usersHome = function(req,res){
-    return res.render('profile'); 
+    if(req.isAuthenticated())
+    return res.render('profile');
+    else
+    return res.redirect('/home'); 
 }
 
 module.exports.createSession = function(req,res){
