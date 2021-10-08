@@ -52,6 +52,7 @@ app.set('view engine','ejs');
 //joining the views folder and indexjs using pathjoin
 app.set('views',path.join(__dirname,'views'));
 
+//mongo store is used to store the session cookie in the db(so that every time we restart the server the session cookie remains stored in the db)
 app.use(session({
     name: 'Classroom-Assistant',
     // Deployment se pehle change krdo onida
@@ -63,7 +64,8 @@ app.use(session({
     },
     store: MongoStore.create(
         {
-            mongoUrl:"mongodb://localhost/[yourDbName]",
+            
+            mongoUrl:"mongodb://localhost/[yourdbname]",
             autoRemove: 'disabled'
         
         },
