@@ -8,7 +8,7 @@ const usersController = require('../controllers/users_controller');
 router.post('/Sign-up',usersController.signUp);
 router.get('/home',usersController.usersHome);
 
-//use pass
+//use passport as a middleware to authenticate 
 router.post('/Create-Session',passport.authenticate(
     'local',
     {failureRedirect:'/home'},

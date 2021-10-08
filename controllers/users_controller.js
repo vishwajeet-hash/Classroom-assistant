@@ -11,7 +11,6 @@ module.exports.signIn = function(req,res){
 }
 
 module.exports.signUp = function(req, res){
-    console.log(req.body);
 
     User.findOne({email: req.body.email}, function(err, user){
         if(err){console.log('error in finding user in signing up'); return}
