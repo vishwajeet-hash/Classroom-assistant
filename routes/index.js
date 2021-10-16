@@ -14,6 +14,7 @@ router.get('/',homeController.home)
 
 //require the next routes.
 router.use('/users', require('./users'));
+router.use('/classrooms', require('./classrooms'));
 
 //export the router
 module.exports = router;

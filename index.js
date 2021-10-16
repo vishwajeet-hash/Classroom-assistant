@@ -36,6 +36,7 @@ const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local');
 const MongoStore = require('connect-mongo');
+const expressLayouts = require('express-ejs-layouts');
 
 //now we will use a middleware to parse the form data into request.body's data
 app.use(express.urlencoded({extended: true})); 
@@ -47,6 +48,10 @@ app.use(cookieParser());
 //middleware to use static files.
 app.use(express.static('assets'));
 
+app.use(expressLayouts);
+//extract style and scripts from sub pages into layout
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
 //setting up the view engine. We will be using ejs
 app.set('view engine','ejs');
 //joining the views folder and indexjs using pathjoin
@@ -65,7 +70,7 @@ app.use(session({
     store: MongoStore.create(
         {
             
-            mongoUrl:"mongodb://localhost/[yourdbname]",
+            mongoUrl:"mongodb://localhost/[classroom]",
             autoRemove: 'disabled'
         
         },

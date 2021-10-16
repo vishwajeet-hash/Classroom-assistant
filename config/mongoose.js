@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 //connect to the base
-mongoose.connect("mongodb://localhost/[yourDbName]");
+mongoose.connect("mongodb://localhost/[classroom]");
 
 
 //acquire the connection (to check if its successful)

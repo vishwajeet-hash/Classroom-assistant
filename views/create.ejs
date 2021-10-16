@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/create.css">
+</head>
+<body> -->
+
+<link rel="stylesheet" href="/css/create.css">
+<h3>Contact Form</h3>
+
+<div class="container">
+  <% if(locals.user){ %>
+  <form action="/classrooms/create" method="POST">
+    <label for="name">Classroom Name</label>
+    <input type="text" id="name" name="name" placeholder="Name..">
+
+    <label for="section">Section</label>
+    <input type="text" id="section" name="section" placeholder="Section..">
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Section..">
+    
+    <label for="grade">Grade</label>
+    <input type="text" id="subject" name="grade" placeholder="Grade">
+
+    <label for="description">Description</label>
+    <textarea id="subject" name="description" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+  <% } %>
+
+  <div id="classroom-container">
+    <ul>
+      <% for(classroom of classrooms){ %>
+        <li>
+          <%= classroom.name %>
+          <small>
+            <%= classroom.teacher %>
+          </small>
+        </li>
+
+        <%} %>
+    </ul>
+  </div>
+</div>
+
+
+<!-- </body>
+</html> -->
