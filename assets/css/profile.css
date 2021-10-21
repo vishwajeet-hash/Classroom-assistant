@@ -1,0 +1,147 @@
+#classroom-cards-container{
+    position: absolute;
+    top: 15vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 3vw;
+    gap: 30px;
+}
+.cards{
+    /* margin: 10px; */
+    /* height: 200px;
+    width: 150px; */
+    height: 20rem;
+    width: 19rem;
+    /* background-image: linear-gradient(to bottom,rgb(9, 158, 83) 50%,white 50%); */
+    /* box-shadow: 0 4px 8px #0005,
+          0 8px 8px #0004; */
+    transition: transform 300ms ease;
+    z-index: 0;
+    border-radius: 12px;
+    border: 1px solid rgb(199,199,199);
+}
+.cards:hover{
+    box-shadow: 0 4px 8px #0005,
+          0 8px 8px #0004;
+}
+/* .cards h3{
+    display: block;
+    width:100%;
+    height: 10%;
+    box-sizing: border-box;
+    color: whitesmoke;
+    box-sizing: border-box;
+
+}
+.classroom-title :hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    text-decoration: underline;
+    color: grey;
+} */
+.classroom-title {
+    
+    margin-top: 4px;
+    margin-left: 1rem;
+    display: inline-block;
+    position: absolute;
+    
+    text-overflow: ellipsis;
+  }
+  
+  .classroom-title:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .classroom-title:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+.cards .upperpart span{
+    color: black;
+    font-family:'Google Sans',Roboto,Arial,sans-serif;
+    margin-left: 1rem;
+    display: inline-block;
+    position: absolute;
+    top: 24%;
+    left: 0;
+}
+.cards .upperpart .classroom-section{
+    /* position: absolute;
+    display: block;
+    
+    top: 55%;
+    box-sizing: border-box; */
+    /* width: auto; */  
+    position: absolute;
+    color: black;
+    font-family:'Google Sans',Roboto,Arial,sans-serif;
+    margin-left: -8.2rem;
+    display: block;
+    top: 21%;
+    left: 0%;
+    /* box-sizing: border-box; */
+}
+.cards .classroom-grade{
+    /* position: absolute;
+    display: block;
+    
+    top: 70%;
+    box-sizing: border-box;  */
+    
+    position: absolute;
+    color: black;
+    font-family:'Google Sans',Roboto,Arial,sans-serif;
+    display: inline-block;
+    top: 21%;
+    left: 0%;
+    /* box-sizing: border-box; */
+}
+.upperpart{
+    border-top-left-radius:12px ;
+    border-top-right-radius:12px ;
+    /* background-color: rgb(9, 158, 83); */
+    background-color: yellowgreen;
+    /* background-color: whitesmoke; */
+    
+    height: 35%;
+
+}
+.middlepart{
+    flex-direction: row-reverse;
+    overflow: visible;
+    position: relative;
+    background-color: #fff;
+    height: 50%;
+}
+.bottompart{
+    border-bottom:1px solid rgb(199,199,199); ;
+    text-align: end;
+    background-color: #fff;
+    border-bottom-left-radius:12px ;
+    border-bottom-right-radius:12px ;
+    height: 15%;
+    border-top: 2px solid rgb(199,199,199);
+}
+.bottompart small{
+    margin-right: 0.5rem;
+    line-height: 3rem;
+    
+}
+#creator {
+    margin-top: -45px;
+    margin-left: 12rem;
+    width: 100px;
+    border-radius: 50%;
+  }

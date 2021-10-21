@@ -1,4 +1,5 @@
 const User = require('../models/User.js');
+const Classroom = require('../models/classroom');
 
 module.exports.checkAuth = function(req,res){
     
@@ -30,10 +31,17 @@ module.exports.signUp = function(req, res){
     });
 }
 module.exports.usersHome = function(req,res){
-    if(req.isAuthenticated())
-    return res.render('profile');
-    else
-    return res.redirect('/home'); 
+    Classroom.find({}).populate('teacher').exec(function(err,classrooms){
+        if (err){
+            console.log("err");
+            return;
+        }
+        if(classrooms){
+            return res.render('profile',{
+                classrooms:classrooms
+            });
+            }
+    });
 }
 
 module.exports.createSession = function(req,res){

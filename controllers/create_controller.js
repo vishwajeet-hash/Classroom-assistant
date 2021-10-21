@@ -18,24 +18,25 @@ module.exports.newclassroom = function(req, res){
     //         }
 
     // })
-    // if (req.isAuthenticated()){
-    // return res.render('create');
-    // }
-    // else{
-    //     return res.redirect('/home');
-    // }
+    if (req.isAuthenticated()){
+    return res.render('create');
+    }
+    else{
+        return res.redirect('/home');
+    }
 
     //populate the creator of each classroom
     Classroom.find({}).populate('teacher').exec(function(err,classrooms){
-        if (req.isAuthenticated()){
-            return res.render('create',{
+        if (err){
+            console.log("err");
+            return;
+        }
+        if(classrooms){
+            return res.render('profile',{
                 classrooms:classrooms
             });
             }
-            else{
-                return res.redirect('/home');
-            }
-    })
+    });
 
 }
 
