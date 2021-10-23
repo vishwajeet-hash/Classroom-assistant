@@ -10,9 +10,9 @@ bar.addEventListener('click', function (e) {
   menu.classList.toggle('menu-active');
 });
 
-menu.addEventListener('click', function (e) {
-  e.stopPropagation();
-});
+// menu.addEventListener('click', function (e) {
+//   e.stopPropagation();
+// });
 
 document.addEventListener('click', function () {
   menu.classList.remove('menu-active');
@@ -21,12 +21,24 @@ document.addEventListener('click', function () {
 
 //settings dropdown
 settings.addEventListener('click',function(e){
+  e.stopPropagation();
   settingsDropdown.classList.toggle("settings-dropdown-active");
   console.log("dropdown should work");
+});
+// settingsDropdown.addEventListener('click', function (e) {
+//   e.stopPropagation();
+// });
+document.addEventListener('click', function () {
+  settingsDropdown.classList.remove('settings-dropdown-active');
 });
 
 //create/join dropdown
 create.addEventListener('click',function(e){
+  e.stopPropagation();
   createJoinDropdown.classList.toggle("create-join-dropdown-active");
   console.log("create join dropdown should work");
+});
+
+document.addEventListener('click', function () {
+  createJoinDropdown.classList.remove('create-join-dropdown-active');
 });
