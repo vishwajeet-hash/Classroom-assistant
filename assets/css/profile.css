@@ -42,12 +42,15 @@
     color: grey;
 } */
 .classroom-title {
-    
+    max-width: 300px;
     margin-top: 4px;
+    margin-bottom: 4px;
     margin-left: 1rem;
     display: inline-block;
-    position: absolute;
-    
+    position: relative;
+    color: #ffffff;
+    overflow: hidden;
+    white-space:nowrap;
     text-overflow: ellipsis;
   }
   
@@ -68,29 +71,29 @@
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-.cards .upperpart span{
-    color: black;
+.cards span{
+    color: honeydew;
     font-family:'Google Sans',Roboto,Arial,sans-serif;
     margin-left: 1rem;
-    display: inline-block;
-    position: absolute;
+    display: block;
+    position: relative;
     top: 24%;
-    left: 0;
+    box-sizing: border-box;
 }
-.cards .upperpart .classroom-section{
+.cards .classroom-section{
     /* position: absolute;
     display: block;
     
     top: 55%;
     box-sizing: border-box; */
-    /* width: auto; */  
-    position: absolute;
-    color: black;
+    /* width: auto; */
+    color: honeydew;
     font-family:'Google Sans',Roboto,Arial,sans-serif;
-    margin-left: -8.2rem;
-    display: block;
+    /* margin-left: -8.2rem; */
+    display: inline-block;
+    position: relative;
+    
     top: 21%;
-    left: 0%;
     /* box-sizing: border-box; */
 }
 .cards .classroom-grade{
@@ -100,12 +103,12 @@
     top: 70%;
     box-sizing: border-box;  */
     
-    position: absolute;
-    color: black;
+    
+    color: honeydew;
     font-family:'Google Sans',Roboto,Arial,sans-serif;
     display: inline-block;
+    position: relative;
     top: 21%;
-    left: 0%;
     /* box-sizing: border-box; */
 }
 .upperpart{

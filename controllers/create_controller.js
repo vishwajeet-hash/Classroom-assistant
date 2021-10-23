@@ -47,7 +47,7 @@ module.exports.create = function(req, res){
         teacher: req.user._id,
         grade:req.body.grade,
         about:req.body.about,
-        subject:req.body.about  
+        description:req.body.description  
     },function(err, post){
         if(err){
             console.log('error in creating a post'); return;

@@ -5,7 +5,8 @@
         <% for (classroom of classrooms){ %>
                 <div class="cards">
                         <div class="upperpart">
-                                <a href=""><h1 class="classroom-title"> <%= classroom.title %> </h1></a>
+                                <a href=""><h1 class="classroom-title"> <%= classroom.name %> </h1></a>
+                        </br>
                                 <small class="classroom-section"> sec-<%= classroom.section %> </small>
                                 <label>&nbsp;<small class="classroom-grade"> grade-<%= classroom.grade %> </small></label>
                                 <label>&nbsp;<span> <%= classroom.teacher.name %> </span></label>
