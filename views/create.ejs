@@ -27,6 +27,7 @@
     <label for="description">Description</label>
     <textarea id="subject" name="description" placeholder="Write something.." style="height:200px"></textarea>
 
+    <input type="hidden" name="user" value="<%= user._id %>">
     <input type="submit" value="Submit">
   </form>
   <% } %>

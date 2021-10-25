@@ -31,17 +31,23 @@ module.exports.signUp = function(req, res){
     });
 }
 module.exports.usersHome = function(req,res){
-    Classroom.find({}).populate('teacher').exec(function(err,classrooms){
-        if (err){
-            console.log("err");
-            return;
-        }
-        if(classrooms){
-            return res.render('profile',{
-                classrooms:classrooms
-            });
+    if(req.isAuthenticated()){
+        User.findOne({_id:req.user._id})
+        .populate({
+            path: 'classrooms',
+            populate: {
+                path: 'teacher'
             }
-    });
+        }).exec(function(err,user){
+                return res.render('profile',{
+                    title: "Users Home",
+                    users: user
+                });
+        });
+        
+    }
+    else
+    return res.redirect('/home'); 
 }
 
 module.exports.createSession = function(req,res){

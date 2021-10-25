@@ -41,18 +41,23 @@ module.exports.newclassroom = function(req, res){
 }
 
 module.exports.create = function(req, res){
+    User.findById(req.user._id,function(err,user){
+        if(user){
     Classroom.create({
         name: req.body.name,
         section:req.body.section,
         teacher: req.user._id,
         grade:req.body.grade,
-        about:req.body.about,
         description:req.body.description  
-    },function(err, post){
+    },function(err, classroom){
         if(err){
             console.log('error in creating a post'); return;
         }
         console.log(req.body);
+        user.classrooms.push(classroom);
+        user.save();
         return res.redirect('/users/home');
     });
+}
+    })
 }

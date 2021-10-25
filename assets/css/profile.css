@@ -42,7 +42,7 @@
     color: grey;
 } */
 .classroom-title {
-    max-width: 300px;
+    max-width: 290px;
     margin-top: 4px;
     margin-bottom: 4px;
     margin-left: 1rem;
@@ -92,8 +92,8 @@
     /* margin-left: -8.2rem; */
     display: inline-block;
     position: relative;
-    
-    top: 21%;
+    margin-left: 1rem;
+    top: -3%;
     /* box-sizing: border-box; */
 }
 .cards .classroom-grade{
@@ -103,12 +103,11 @@
     top: 70%;
     box-sizing: border-box;  */
     
-    
     color: honeydew;
     font-family:'Google Sans',Roboto,Arial,sans-serif;
     display: inline-block;
     position: relative;
-    top: 21%;
+    top: -3%;
     /* box-sizing: border-box; */
 }
 .upperpart{

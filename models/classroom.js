@@ -13,17 +13,17 @@ const classroomSchema =new mongoose.Schema({
     section:{
         type:String
     },
-    subject:{
+    grade:{
         type:String
     },
-    about:{
+    description:{
         type:String
     },
     teacher:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
-    student:[
+    students:[
         {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
