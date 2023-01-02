@@ -1,0 +1,91 @@
+main{
+    z-index: 0;
+    position: relative;
+}
+#make-announcement{
+    height: 5vh; 
+    width: 50%;
+    position: absolute;
+    top:20vh;
+    left: 30vw;
+}
+#copy-classroom-code{
+    position: absolute;
+    height: 20vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    left: 10vw;
+    top: 20vh;
+    background-color: whitesmoke;
+    overflow: hidden;
+    box-shadow: 0 5px 5px 0 rgba(255, 255, 255, 0.315);
+    gap: 10vh;
+}
+#copy-code-btn{
+    height: 30%;
+    width: 50%;
+    background-color: yellowgreen;
+    
+}
+#copy-code-btn:hover{
+    background-color: rgb(42, 80, 4);
+}
+#classroom-code{
+    width: 80%;
+}
+#all-announcements{
+    position: absolute;
+    left: 10vw;
+    top: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* gap: 10px; */
+    width: 50%;
+    
+}
+.announcement{
+    position: relative;
+    display: block;
+    padding: 20px;
+    min-height: 100px;
+    width: 100%;
+    border-color: black;
+    overflow: hidden;
+}
+.announcement h3{
+    display: inline;
+}
+.announcement small{
+    /* position: ; */
+    display: block;
+    margin: 10px;
+}
+
+.delete{
+    position: absolute;
+    top: 0;
+    right: 0%;
+    height: 20px;
+    width: 20px;
+    justify-content: center;
+}
+.delete:hover{
+    background-color: red;
+}
+.delete a i{
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete a{
+    align-items: center;
+    justify-content: center;
+}
